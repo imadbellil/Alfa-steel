@@ -549,7 +549,6 @@ nav a.active {
   color: var(--white);
 }
 
-
 .hero-lottie {
   flex: 0 0 auto;
   max-width: 340px;
@@ -2217,8 +2216,3 @@ body, input, textarea, button {
     font-size: 2rem !important;
   }
 }
-
-
-
-
-
