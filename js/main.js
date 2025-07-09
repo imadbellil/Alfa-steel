@@ -175,7 +175,7 @@ navLinks.forEach(link => {
 
 // Scroll-in animations
 function revealOnScroll() {
-  document.querySelectorAll('.section-title, .section-desc, .about-content, .products-grid, .services-list, .why-choose, .contact-wrap').forEach(el => {
+  document.querySelectorAll('body *').forEach(el => {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight - 80) {
       el.classList.add('visible');
@@ -425,3 +425,19 @@ document.getElementById('phoneInput').addEventListener('input', function (e) {
       header.classList.toggle('light-navbar', isLight);
     });
   })();
+
+
+document.getElementById('next').onclick = function(){
+  let lists = document.querySelectorAll('.item');
+  document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+  let lists = document.querySelectorAll('.item');
+  document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+
+// Auto-slide every 3 seconds
+setInterval(function() {
+  let lists = document.querySelectorAll('.item');
+  document.getElementById('slide').appendChild(lists[0]);
+}, 5000);
