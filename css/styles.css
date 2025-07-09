@@ -2478,7 +2478,7 @@ body, input, textarea, button {
   gap: 3.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-left: 17%;
+  margin-left: 10%;
   flex-wrap: wrap;
 }
 .join-us-text {
