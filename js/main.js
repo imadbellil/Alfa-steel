@@ -175,12 +175,31 @@ navLinks.forEach(link => {
 
 // Scroll-in animations
 function revealOnScroll() {
-  document.querySelectorAll('body *').forEach(el => {
+  document.querySelectorAll('.section-title, .section-desc, .about-content, .products-grid, .services-list, .why-choose, .contact-wrap').forEach(el => {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight - 80) {
       el.classList.add('visible');
     }
   });
+  // Join Us section scroll-in
+  const joinUs = document.querySelector('.join-us-section');
+  if (joinUs) {
+    const joinUsRect = joinUs.getBoundingClientRect();
+    if (joinUsRect.top < window.innerHeight - 80) {
+      // Animate headline and subheadline
+      joinUs.querySelectorAll('.section-title, .section-desc').forEach(el => el.classList.add('visible'));
+      // Animate perks
+      joinUs.querySelectorAll('.join-us-perks li').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 120 + i * 80);
+      });
+      // Animate CTA
+      const cta = joinUs.querySelector('.join-us-cta');
+      if (cta) setTimeout(() => cta.classList.add('visible'), 600);
+      // Animate visual
+      const visual = joinUs.querySelector('.join-us-carousel-placeholder');
+      if (visual) setTimeout(() => visual.classList.add('visible'), 400);
+    }
+  }
 }
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('DOMContentLoaded', revealOnScroll);
@@ -427,17 +446,114 @@ document.getElementById('phoneInput').addEventListener('input', function (e) {
   })();
 
 
-document.getElementById('next').onclick = function(){
-  let lists = document.querySelectorAll('.item');
-  document.getElementById('slide').appendChild(lists[0]);
-}
-document.getElementById('prev').onclick = function(){
-  let lists = document.querySelectorAll('.item');
-  document.getElementById('slide').prepend(lists[lists.length - 1]);
-}
+  document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+  }
+  document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+  }
+  
+  // Auto-slide every 3 seconds
+  setInterval(function() {
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+  }, 5000);
 
-// Auto-slide every 3 seconds
-setInterval(function() {
-  let lists = document.querySelectorAll('.item');
-  document.getElementById('slide').appendChild(lists[0]);
-}, 5000);
+// CV Upload Form Submission to Telegram Bot
+const cvForm = document.getElementById('cvUploadForm');
+if (cvForm) {
+  const cvFileInput = document.getElementById('cvFileInput');
+  const cvFileLabelText = document.getElementById('cvFileLabelText');
+  const cvFormStatus = document.getElementById('cvFormStatus');
+  const cvNameInput = document.getElementById('cvNameInput');
+  const cvEmailInput = document.getElementById('cvEmailInput');
+
+  // Update label on file select
+  cvFileInput.addEventListener('change', function () {
+    if (this.files.length) {
+      cvFileLabelText.textContent = this.files[0].name;
+    } else {
+      cvFileLabelText.textContent = 'Sélectionnez un CV (PDF uniquement)';
+    }
+  });
+
+  cvForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    cvFormStatus.textContent = '';
+    cvFormStatus.className = 'form-status';
+
+    const name = cvNameInput.value.trim();
+    const email = cvEmailInput.value.trim();
+    const file = cvFileInput.files[0];
+
+    // Validation
+    if (!name) {
+      cvFormStatus.textContent = 'Veuillez entrer votre nom.';
+      cvFormStatus.classList.add('error');
+      cvNameInput.focus();
+      return;
+    }
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      cvFormStatus.textContent = 'Veuillez entrer un email valide.';
+      cvFormStatus.classList.add('error');
+      cvEmailInput.focus();
+      return;
+    }
+    if (!file) {
+      cvFormStatus.textContent = 'Veuillez sélectionner un fichier CV (PDF uniquement).';
+      cvFormStatus.classList.add('error');
+      return;
+    }
+    const allowedTypes = [
+      'application/pdf'
+    ];
+    const allowedExt = ['.pdf'];
+    const fileName = file.name.toLowerCase();
+    if (!allowedTypes.includes(file.type) && !allowedExt.some(ext => fileName.endsWith(ext))) {
+      cvFormStatus.textContent = 'Seuls les fichiers PDF sont autorisés.';
+      cvFormStatus.classList.add('error');
+      return;
+    }
+    if (file.size > 8 * 1024 * 1024) { // 8MB limit
+      cvFormStatus.textContent = 'Le fichier ne doit pas dépasser 8 Mo.';
+      cvFormStatus.classList.add('error');
+      return;
+    }
+
+    cvFormStatus.textContent = 'Envoi en cours...';
+    cvFormStatus.classList.remove('error', 'success');
+
+    // Send message to Telegram
+    const telegramText = `*Nouveau CV reçu :*\n👤 Nom: ${name}\n📧 Email: ${email}`;
+    try {
+      // 1. Send message
+      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: telegramText,
+          parse_mode: 'Markdown'
+        })
+      });
+      // 2. Send file
+      const tgFormData = new FormData();
+      tgFormData.append('chat_id', chatId);
+      tgFormData.append('document', file);
+      await fetch(`https://api.telegram.org/bot${botToken}/sendDocument`, {
+        method: 'POST',
+        body: tgFormData
+      });
+      cvFormStatus.textContent = 'CV envoyé avec succès !';
+      cvFormStatus.classList.add('success');
+      cvForm.reset();
+      cvFileLabelText.textContent = 'Sélectionnez un CV (PDF uniquement)';
+    } catch (error) {
+      console.error(error);
+      cvFormStatus.textContent = "Erreur lors de l'envoi. Veuillez réessayer.";
+      cvFormStatus.classList.add('error');
+    }
+  });
+}

@@ -122,7 +122,7 @@
           <li><a href="#selling-points">Point de vente</a></li>
           <li><a href="#products">Produits</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#why">Notre Equipe</a></li>
+          <li><a href="#why">Recrutement</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -165,7 +165,7 @@
   </section>
   <!-- About Section -->
   <section id="about" style="background: (--bg); padding: 5rem 1rem;">
-    <h2 class="section-title" style="color: #878787;">Nos services de <span class="metal-gradient" style="color: #d32f2f;">TRANSFORMATIONS</span></h2>
+    <h2 class="section-title" style="color: #878787;">Nos services de <span class="metal-gradient" style="color: #d32f2f;">Transformation</span></h2>
     <p class="section-desc">  Alfa Steel est spécialisée dans la distribution et la transformation de produits en acier, offrant des solutions de qualité avec un service rapide et fiable. </p>
     <div class="containers">
       <div id="slide">
@@ -355,7 +355,7 @@
 
   <!-- Services Section -->
   <section id="services">
-    <h2 class="section-title" style="color: #878787;">Nos <span class="metal-gradient" style="color: #d32f2f;">Demande Online</span></h2>
+    <h2 class="section-title" style="color: #878787;">Nos <span class="metal-gradient" style="color: #d32f2f;">Demandes Online</span></h2>
     <p class="section-desc">Nous accompagnons de nombreux secteurs et proposons des services adaptés à vos besoins.</p>
     <div class="services-list">
       <a class="service-item" href="#contact" style="text-decoration:none; color:inherit; display:block;">
@@ -371,91 +371,41 @@
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
-  <section id="why">
-    <div class="wrapper">
-      <h2 class="section-title" style="color: #878787;">Notre <span class="metal-gradient" style="color: #d32f2f;">Equipe</span></h2>
-      <div class="card_Container">
-
-          <div class="card">
-
-              <div class="imbBx">
-                  <img src="./images/commercial.jpg" alt="">
-              </div>
-
-              <div class="content">
-                  <div class="contentBx">
-                      <h3> Mohamed<br><span>Service commercial</span></h3>
-                  </div>
-                  <ul class="sci">
-                      <li style="--i: 1">
-                          <a href="https://wa.me/213561631866"><i class="fa-brands fa-whatsapp"></i></a>
-                      </li>
-                      <li style="--i: 2">
-                          <a href="tel:+213561631866"><i class="fa-solid fa-phone"></i></a>
-                      </li>
-                      <li style="--i: 3">
-                        <a href="#"><i class="fa-brands fa-telegram-plane"></i></a>
-                    </li>
-                  </ul>
-              </div>
-
-          </div>
-
-          <div class="card">
-
-              <div class="imbBx">
-                  <img src="./images/invoice.png" alt="">
-              </div>
-
-              <div class="content">
-                  <div class="contentBx">
-                      <h3>m<br><span>Service facturation</span></h3>
-                  </div>
-                  <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://wa.me/213561631875"><i class="fa-brands fa-whatsapp"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="tel:+213561631875"><i class="fa-solid fa-phone"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                      <a href="#"><i class="fa-brands fa-telegram-plane"></i></a>
-                  </li>
-                  </ul>
-              </div>
-
-          </div>
-
-          <div class="card">
-
-              <div class="imbBx">
-                  <img src="./images/transform.png" alt="">
-              </div>
-
-              <div class="content">
-                  <div class="contentBx">
-                      <h3>islam<br><span>Service Transformation</span></h3>
-                  </div>
-                  <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://wa.me/213561631869"><i class="fa-brands fa-whatsapp"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="tel:+213561631869"><i class="fa-solid fa-phone"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                      <a href="#"><i class="fa-brands fa-telegram-plane"></i></a>
-                  </li>
-                  </ul>
-              </div>
-
-          </div>
-          </div>
+  <!-- Join Us Recruitment Section -->
+  <section id="why" class="join-us-section">
+    <h2 class="section-title" style="color: #878787;">Rejoignez <span class="metal-gradient" style="color: #d32f2f;">L'equipe Alfa</span></h2>
+    <div class="join-us-container">
+      <!-- Left: Text Block & Form -->
+      <div class="join-us-text">
+        <p class="section-desc">Construisez votre avenir dans l’industrie métallurgique avec une équipe innovante et solidaire. Découvrez nos opportunités et envoyez-nous votre CV !</p>
+        <ul class="join-us-perks">
+          <li><i class="fas fa-user-shield"></i><span>Stabilité & Sécurité d'emploi</span></li>
+          <li><i class="fas fa-hard-hat"></i><span>Environnement industriel moderne</span></li>
+          <li><i class="fas fa-users"></i><span>Esprit d'équipe & entraide</span></li>
+          <li><i class="fas fa-lightbulb"></i><span>Formation & évolution de carrière</span></li>
+        </ul>
       </div>
-
-  </div>
-</section>
+      <div class="join-us-upload"> 
+        <form id="cvUploadForm" class="join-us-form" autocomplete="off" enctype="multipart/form-data" novalidate>
+          <div class="form-row">
+            <input type="text" name="name" id="cvNameInput" placeholder="Votre nom" required autocomplete="name" />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" id="cvEmailInput" placeholder="Votre email" required autocomplete="email" />
+          </div>
+          <div class="form-row file-row">
+            <label for="cvFileInput" class="file-label">
+              <i class="fas fa-paperclip"></i> <span id="cvFileLabelText">Sélectionnez un CV (PDF uniquement)</span>
+              <input type="file" name="cv" id="cvFileInput" accept=".pdf,application/pdf" required style="display:none;" />
+            </label>
+          </div>
+          <button type="submit" class="join-us-cta">Uploader mon CV</button>
+          <div id="cvFormStatus" class="form-status" style="margin-top:0.7em;min-height:1.2em;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact-two-col" style="max-width:1100px;margin:0 auto;padding:3rem 1.5rem;display:flex;flex-wrap:wrap;gap:2.5rem;align-items:stretch;justify-content:center;background:var(--white);border-radius:18px;box-shadow:0 6px 32px rgba(44,62,80,0.10);">
