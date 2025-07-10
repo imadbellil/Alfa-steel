@@ -2109,21 +2109,6 @@ body, input, textarea, button {
   }
 }
 
-/* --- Animated Contact Buttons (Simple & Elegant) --- */
-.contact-form-col button,
-.contact-form button {
-  transition: transform 0.16s cubic-bezier(.4,2,.6,1), box-shadow 0.16s cubic-bezier(.4,2,.6,1), background 0.18s;
-}
-.contact-form-col button:hover,
-.contact-form-col button:focus,
-.contact-form button:hover,
-.contact-form button:focus {
-  transform: scale(1.045);
-  box-shadow: 0 4px 16px 0 rgba(211,47,47,0.13);
-  background: linear-gradient(90deg,#f8b7b7,#d32f2f);
-  outline: none;
-}
-
 /* --- Animated Social Media Icons (Simple & Elegant) --- */
 .contact-info-col a i,
 .contact-info-col .fab,
