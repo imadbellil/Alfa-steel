@@ -2335,8 +2335,6 @@ body, input, textarea, button {
   height: 300px;
   margin: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
-              inset 0 0 0 1000px rgba(67, 52, 109, .6);
   border-radius: 15px;
   display: flex;
   justify-content: center;
