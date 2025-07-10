@@ -1,1 +1,7 @@
-
+@media (max-width: 600px) {
+  .containers {
+    width: 50% !important;
+    min-width: unset !important;
+    max-width: unset !important;
+  }
+}
