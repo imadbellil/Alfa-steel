@@ -454,13 +454,12 @@
         <input type="email" name="email" id="emailInput" required placeholder="Votre adresse email" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;">
         <label for="messageInput" style="font-weight:500;">Message ou Consultation</label>
         <textarea name="message" id="messageInput" required rows="5" placeholder="Votre message" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;min-height:100px;max-height:240px;resize:vertical;line-height:1.5;"></textarea>
-        <div class="file-upload-container" style="font-size:0.95rem;display:flex;flex-direction:column;gap:0.3rem;">
-          <span class="file-upload-label" style="font-weight:500;color:#555;">Joindre un fichier PDF ou Image</span>
-          <label for="fileInput" class="file-upload-button" style="display:inline-block;background:#949292;color:#fff;padding:0.4rem 1rem;border-radius:6px;cursor:pointer;font-weight:500;font-size:0.92rem;width:fit-content;transition:background 0.2s;">
-            <span id="fileLabelText">Sélectionnez un fichier</span>
-            <input type="file" name="file" id="fileInput" accept=".pdf,image/*" class="file-upload-input" style="display:none;" onchange="document.getElementById('fileLabelText').textContent = this.files.length ? this.files[0].name : 'Sélectionnez un fichier';" />
-          </label>
-        </div>
+        <div class="form-row file-row">
+            <label for="cvFileInput" class="file-label">
+              <i class="fas fa-paperclip"></i> <span id="cvFileLabelText">Sélectionnez un fichier (PDF uniquement)</span>
+              <input type="file" name="cv" id="cvFileInput" accept=".pdf,application/pdf" required style="display:none;" />
+            </label>
+        </div> 
         <button type="submit" class="join-us-cta">Envoyer</button>
         <div id="formStatus" style="margin-top:0.7em;min-height:1.2em;color:#d32f2f;font-weight:500;text-align:center;"></div>
       </form>
