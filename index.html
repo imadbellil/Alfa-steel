@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Enable browser caching and use CDN for static assets -->
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+  <meta http-equiv="Pragma" content="public">
+  <meta http-equiv="Expires" content="31536000">
+
+  <!-- Use CDN for Font Awesome and Google Fonts (already present) -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SARL ALFA STEEL | Fournisseur de Matériaux Métalliques en Algérie</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="SARL Alfa Steel : Fournisseur de matériaux métalliques industriels (acier, inox, aluminium, cuivre). Qualité, expertise, livraison rapide en Algérie.">
+  <meta name="keywords" content="Alfa Steel, matériaux métalliques, acier, aluminium, inox, fournisseur, Algérie, Rouiba, Mostaganem, Boumerdes, transformation, découpe, livraison rapide">
+  <meta name="author" content="SARL Alfa Steel">
+  <meta name="robots" content="index, follow">
+
+  <!-- Preconnect for Google Fonts and CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alfa Steel | Fournisseur de Matériaux Métalliques en Algérie">
+  <meta property="og:description" content="SARL Alfa Steel : Fournisseur de matériaux métalliques industriels (acier, inox, aluminium, cuivre). Qualité, expertise, livraison rapide en Algérie.">
+  <meta property="og:url" content="https://alfa-steel.com/">
+  <meta property="og:site_name" content="Alfa Steel">
+  <meta property="og:image" content="https://alfa-steel.com/images/logo.png">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alfa Steel | Fournisseur de Matériaux Métalliques en Algérie">
+  <meta name="twitter:description" content="SARL Alfa Steel : Fournisseur de matériaux métalliques industriels (acier, inox, aluminium, cuivre). Qualité, expertise, livraison rapide en Algérie.">
+  <meta name="twitter:image" content="https://alfa-steel.com/images/logo.png">
+  <meta name="twitter:site" content="@alfasteel16">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alfa-steel.com/">
+
+  <!-- Google Fonts (swap for faster rendering) -->
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Poppins:wght@600;700&family=Montserrat:wght@700;500;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="all" crossorigin="anonymous">
+
+  <!-- Font Awesome CDN (defer loading for speed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="all" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main CSS (add media attribute for non-blocking load) -->
+  <link href="css/styles.css" rel="stylesheet" media="all" />
+  <!-- Responsive CSS (add media attribute for non-blocking load) -->
+  <link href="css/responsive.css" rel="stylesheet" media="all" />
+  <!-- Lottie Animation for Why Choose Us Section -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <!-- Schema.org JSON-LD for SEO -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SARL Alfa Steel",
+  "url": "https://alfa-steel.com/",
+  "logo": "https://alfa-steel.com/images/shortcut.webp",
+  "description": "Fournisseur de matériaux métalliques industriels en Algérie : acier, inox, aluminium, cuivre, transformation et découpe sur-mesure.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zone Industrielle Rouiba",
+    "addressLocality": "Alger",
+    "addressRegion": "Alger",
+    "postalCode": "16012",
+    "addressCountry": "DZ"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+213561631866",
+      "contactType": "customer service",
+      "email": "alfasteel16@alfa-steel.com",
+      "areaServed": "DZ",
+      "availableLanguage": ["fr", "ar"]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/16B97cpG3K/",
+    "https://wa.me/213561631866",
+    "https://t.me/alfasteel16"
+  ]
+}
+</script>
+  <!-- Main JavaScript file -->
+  <script src="js/main.js" defer></script>
+  <meta name="theme-color" content="#d32f2f">
+</head>
+<body>
+  <a href="#hero" class="skip-link">Aller au contenu principal</a>
+  <!-- SteelLoader Preloader -->
+  <div id="steelLoader" class="steel-loader">
+    <div class="steel-loader-spinner">
+      <div class="steel-loader-bar steel-loader-bar1"></div>
+      <div class="steel-loader-bar steel-loader-bar2"></div>
+      <div class="steel-loader-bar steel-loader-bar3"></div>
+      <div class="steel-loader-bar steel-loader-bar4"></div>
+    </div>
+    <span class="steel-loader-text">Chargement...</span>
+  </div>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <div class="nav-toggle" id="navToggle" aria-label="Menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="navLinks">
+          <button class="nav-close-btn" aria-label="Fermer le menu" type="button">&times;</button>
+          <li><a href="#hero" class="active">Accueil</a></li>
+          <li><a href="#about">Transformation</a></li>
+          <li><a href="#selling-points">Point de vente</a></li>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Recrutement</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="hero-light-toggle" aria-label="Basculer le mode clair du hero" class="modern-toggle-btn">
+        <span class="modern-toggle-track"></span>
+        <span class="modern-toggle-knob">
+          <i id="toggle-icon" class="fas fa-moon"></i>
+        </span>
+      </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>
+        <span class="metal-gradient">SARL ALFA STEEL</span><br>
+        Fournisseur de Matériaux Métalliques Industriels
+      </h1>
+      <p>
+        Acier, inox et plus — qualité supérieure, expertise, livraison rapide pour vos projets industriels et de construction.
+      </p>
+      <div class="hero-btns">
+        <a href="#products" class="btn">Nos Produits</a>
+        <a href="#contact" class="btn outline">Contactez-nous</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="top">
+        <a href="#contact" class="icon">
+          <img src="images/shortcut.webp" alt="Contact" loading="lazy" />
+        </a>
+      </div>
+      <div class="box">
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" style="background: (--bg); padding: 5rem 1rem;">
+    <h2 class="section-title" style="color: #878787;">Nos services de <span class="metal-gradient" style="color: #d32f2f;">Transformation</span></h2>
+    <p class="section-desc">  Alfa Steel est spécialisée dans la distribution et la transformation de produits en acier, offrant des solutions de qualité avec un service rapide et fiable. </p>
+    <div class="containers products-grid">
+      <div id="slide">
+          <div class="item" style="background-image: url(images/1.png);">
+              <div class="content">
+                  <div class="name">Découpe laser</div>
+                  <div class="des">Découpe de précision de tôles et pièces métalliques par technologie laser, idéale pour des formes complexes et une finition nette.</div>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/2.png);">
+              <div class="content">
+                  <div class="name">Découpe plasma</div>
+                  <div class="des">Découpe rapide et efficace de métaux épais grâce au plasma, adaptée aux grandes séries et à la construction industrielle.</div>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/3.png);">
+              <div class="content">
+                  <div class="name">Perçage</div>
+                  <div class="des">Service de perçage industriel pour tous types de métaux, garantissant précision et adaptabilité à vos besoins de fabrication.</div>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/4.png);">
+              <div class="content">
+                  <div class="name">TN40 specific</div>
+                  <div class="des">Profilés nervurés TN40 pour couverture et bardage, offrant rigidité et résistance mécanique pour vos projets de toiture.</div>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/5.png);">
+              <div class="content">
+                  <div class="name">Platines Sur mesure</div>
+                  <div class="des">Fabrication de platines métalliques sur mesure selon vos plans, pour assemblages, fixations et structures spécifiques.</div>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(images/6.png);">
+              <div class="content">
+                  <div class="name">Bobines</div>
+                  <div class="des">Bobines d'acier laminé à chaud ou à froid, idéales pour la fabrication de tôles, profilés et pièces métalliques. Disponibles en différentes largeurs et épaisseurs pour répondre à tous vos besoins industriels.</div>
+              </div>
+          </div>
+      </div>
+      <div class="buttons">
+          <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+          <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+  </div>
+</section>
+  <!-- Points de Vente Section -->
+  <section id="selling-points">
+    <h2 class="section-title" style="color: #878787;">Où <span class="metal-gradient" style="color: #d32f2f;">Nous Trouver</span></h2>
+    <p class="section-desc">Retrouvez-nous dans nos différents points de vente à travers l'Algérie.</p>
+    <div class="selling-points-list products-grid">
+      <!-- Point 1 -->
+      <div class="selling-point-card why-card card" style="width:300px;height:300px;margin:20px;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center;border-radius:15px;box-shadow:0 30px 30px -20px rgba(0,0,0,1),inset 0 0 0 1000px rgba(67,52,109,.6);">
+        <div class="iframeBx" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.037312777879!2d3.3030466!3d36.721665099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e5a858f37ea89%3A0x90750a19a86c135a!2sALFA%20STEEL%20Sarl!5e0!3m2!1sfr!2sdz!4v1748687252337!5m2!1sfr!2sdz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rouiba"></iframe>
+        </div>
+        <div class="content" style="z-index:2;">
+          <div class="contentBx">
+            <h3>Rouiba<br><span>Point de vente</span></h3>
+          </div>
+          <ul class="sci">
+            <li style="--i:1"><a href="tel:+213561631866"><i class="fa-solid fa-phone"></i></a></li>
+            <li style="--i:2"><a href="mailto:alfasteel16@alfa-steel.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li style="--i:3"><a href="https://maps.app.goo.gl/167P6eHh7Kdsj5Ze8" target="_blank"><i class="fa-solid fa-map-marker-alt"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Point 2 -->
+      <div class="selling-point-card why-card card" style="width:300px;height:300px;margin:20px;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center;border-radius:15px;box-shadow:0 30px 30px -20px rgba(0,0,0,1),inset 0 0 0 1000px rgba(67,52,109,.6);">
+        <div class="iframeBx" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12924.356915853115!2d0.11623890000000868!3d35.920315900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12820281526abea3%3A0xc12935f3267f0887!2sSarl%20ALFA%20STEEL!5e0!3m2!1sfr!2sdz!4v1729963181896!5m2!1sfr!2sdz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mostaganem"></iframe>
+        </div>
+        <div class="content" style="z-index:2;">
+          <div class="contentBx">
+            <h3>Mostaganem<br><span>Point de vente</span></h3>
+          </div>
+          <ul class="sci">
+            <li style="--i:1"><a href="tel:+213561631873"><i class="fa-solid fa-phone"></i></a></li>
+            <li style="--i:2"><a href="mailto:Alfasteel035@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li style="--i:3"><a href="https://maps.app.goo.gl/cZUdwBhSNKvnXwvM8" target="_blank"><i class="fa-solid fa-map-marker-alt"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Point 3 -->
+      <div class="selling-point-card why-card card" style="width:300px;height:300px;margin:20px;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center;border-radius:15px;box-shadow:0 30px 30px -20px rgba(0,0,0,1),inset 0 0 0 1000px rgba(67,52,109,.6);">
+        <div class="iframeBx" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3201.560572883924!2d3.260134874574678!3d36.63696267688633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e599d6fde49a3%3A0xfcee7594154ace6a!2sAlfa%20steel!5e0!3m2!1sfr!2sdz!4v1729963609321!5m2!1sfr!2sdz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Boumerdes"></iframe>
+        </div>
+        <div class="content" style="z-index:2;">
+          <div class="contentBx">
+            <h3>Boumerdes<br><span>Centre de Transformation</span></h3>
+          </div>
+          <ul class="sci">
+            <li style="--i:1"><a href="tel:+213561631869"><i class="fa-solid fa-phone"></i></a></li>
+            <li style="--i:2"><a href="mailto:alfasteel16@alfa-steel.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li style="--i:3"><a href="https://maps.app.goo.gl/yciNet4rA5nE6LmbA" target="_blank"><i class="fa-solid fa-map-marker-alt"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2 class="section-title" style="color: #878787;">Nos <span class="metal-gradient" style="color: #d32f2f;">Produits</span></h2>
+    <p class="section-desc">Découvrez notre large gamme de matériaux métalliques adaptés à tous vos projets.</p>
+    <div class="products-grid">
+      <!-- Tôles -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s1.webp" alt="Tôles" width="38" height="38">
+        </div>
+        <h3>Tôles</h3>
+        <p>Formats standards ou sur-mesure, galvanisées, inox, etc.</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="Catalogue/catalogue.html" class="variation-link" target="_blank" rel="noopener" onclick="document.getElementById('variationModal').style.display='none';">Voir Catalogue</a>
+        </div>
+      </div>
+      <!-- Poutrelles & Profilés -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s3.webp" alt="Poutrelles" width="38" height="38">
+        </div>
+        <h3>Poutrelles & Profilés</h3>
+        <p>IPE, UPN, HEA et HEB</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="Catalogue/catalogue.html" class="variation-link" target="_blank" rel="noopener" onclick="document.getElementById('variationModal').style.display='none';">Voir Catalogue</a>
+        </div>
+      </div>
+      <!-- Tubes & Tuyaux -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s4.webp" alt="Tubes" width="38" height="38">
+        </div>
+        <h3>Tubes</h3>
+        <p>Tubes rond, carrés et rectangulaires (Acier noir et galvanisé).</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="Catalogue/catalogue.html" class="variation-link" target="_blank" rel="noopener" onclick="document.getElementById('variationModal').style.display='none';">Voir Catalogue</a>
+        </div>
+      </div>
+      <!-- Fer Marchand -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s2.webp" alt="Fils & Treillis" width="38" height="38">
+        </div>
+        <h3>Fer Marchand</h3>
+        <p>Fer Rond, Carré et Fer plat en tous dimensions</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="Catalogue/catalogue.html" class="variation-link" target="_blank" rel="noopener" onclick="document.getElementById('variationModal').style.display='none';">Voir Catalogue</a>
+        </div>
+      </div>
+      <!-- Bobines Métalliques -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s6.webp" alt="Bobines" width="38" height="38">
+        </div>
+        <h3>Bobines Métalliques</h3>
+        <p>Acier laminé à chaud/froid en rouleaux.</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="Catalogue/catalogue.html" class="variation-link" target="_blank" rel="noopener" onclick="document.getElementById('variationModal').style.display='none';">Voir Catalogue</a>
+        </div>
+      </div>
+      <!-- Transformations métalliques -->
+      <div class="product-card" tabindex="0" style="cursor:pointer; text-decoration:none; color:inherit;">
+        <div class="product-icon">
+          <img src="images/s5.webp" alt="Barres" width="38" height="38">
+        </div>
+        <h3>Transformations métalliques</h3>
+        <p>Découpe specific, Platine specific, Percage professionnel laser et plasma et Pieces mecanique a la demande</p>
+        <div class="product-variations-data" style="display:none;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdysxvwtFU_lM5mrOGtRM6HV6RjOPvGGRvw56DdVN8nsFAl7g/viewform?usp=dialog" class="variation-link" target="_blank" rel="noopener">Demande de transformation</a>
+          <a href="#contact" class="variation-link" onclick="document.getElementById('variationModal').style.display='none';">Contactez-nous SVP</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for variations -->
+    <div id="variationModal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content" tabindex="-1">
+        <button class="modal-close" aria-label="Fermer">&times;</button>
+        <h4 id="modalTitle" style="margin-top:0"></h4>
+        <div id="modalVariations"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 class="section-title" style="color: #878787;">Nos <span class="metal-gradient" style="color: #d32f2f;">Demandes Online</span></h2>
+    <p class="section-desc">Nous accompagnons de nombreux secteurs et proposons des services adaptés à vos besoins.</p>
+    <div class="services-list">
+      <a class="service-item" href="#contact" style="text-decoration:none; color:inherit; display:block;">
+        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+        <h4>Découpe & Transformation</h4>
+        <p>Découpe sur-mesure, pliage, perçage, soudure selon vos plans.</p>
+      </a>
+      <a class="service-item" href="#contact" style="text-decoration:none; color:inherit; display:block;">
+        <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+        <h4>Conseil & Devis</h4>
+        <p>Accompagnement technique, devis, suivi de commande.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Join Us Recruitment Section -->
+  <section id="why" class="join-us-section">
+    <h2 class="section-title" style="color: #878787;">Rejoignez <span class="metal-gradient" style="color: #d32f2f;">L'equipe Alfa</span></h2>
+    <div class="join-us-container products-grid">
+      <!-- Left: Text Block & Form -->
+      <div class="join-us-text">
+        <p class="section-desc">Construisez votre avenir dans l’industrie métallurgique avec une équipe innovante et solidaire. Découvrez nos opportunités et envoyez-nous votre CV !</p>
+        <ul class="join-us-perks">
+          <li><i class="fas fa-user-shield"></i><span>Stabilité & Sécurité d'emploi</span></li>
+          <li><i class="fas fa-hard-hat"></i><span>Environnement industriel moderne</span></li>
+          <li><i class="fas fa-users"></i><span>Esprit d'équipe & entraide</span></li>
+          <li><i class="fas fa-lightbulb"></i><span>Formation & évolution de carrière</span></li>
+        </ul>
+      </div>
+      <div class="join-us-upload"> 
+        <form id="cvUploadForm" class="join-us-form" autocomplete="off" enctype="multipart/form-data" novalidate>
+          <div class="form-row">
+            <input type="text" name="name" id="cvNameInput" placeholder="Votre nom" required autocomplete="name" />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" id="cvEmailInput" placeholder="Votre email" required autocomplete="email" />
+          </div>
+          <div class="form-row file-row">
+            <label for="cvFileInput" class="file-label">
+              <i class="fas fa-paperclip"></i> <span id="cvFileLabelText">Sélectionnez un CV (PDF uniquement)</span>
+              <input type="file" name="cv" id="cvFileInput" accept=".pdf,application/pdf" required style="display:none;" />
+            </label>
+          </div>
+          <button type="submit" class="join-us-cta">Uploader mon CV</button>
+          <div id="cvFormStatus" class="form-status" style="margin-top:0.7em;min-height:1.2em;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="products-grid">
+    <div class="contact-two-col" style="max-width:1100px;margin:0 auto;padding:3rem 1.5rem;display:flex;flex-wrap:wrap;gap:2.5rem;align-items:stretch;justify-content:center;background:var(--white);border-radius:18px;box-shadow:0 6px 32px rgba(44,62,80,0.10);">
+      <!-- Info Column -->
+      <div class="contact-info-col" style="flex:1 1 320px;min-width:260px;max-width:350px;background:#f8fafb;border-radius:14px;box-shadow:0 2px 16px rgba(10,151,176,0.06);padding:2.2rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <h2 style="margin:0 0 1.2rem 0;font-size:2rem;font-weight:700;color:#d32f2f;text-align:center;">Contactez <span style="color:#3a1f1f;">ALFA STEEL</span></h2>
+        <div style="margin-bottom:1.2rem;text-align:center;">
+          <h4 style="margin-bottom:0.3rem;font-size:1.1rem;font-weight:500;color:#333;">Scannez le QR Code</h4>
+          <img src="images/QR.png" alt="QR Code" style="width:120px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(44,62,80,0.10);">
+        </div>
+        <ul style="list-style:none;padding:0;margin:0 0 1.2rem 0;width:100%;">
+          <li style="margin-bottom:0.7em;display:flex;align-items:center;gap:0.7em;font-size:1.05em;">
+            <span class="fa-solid fa-map-marker-alt" style="color:#d32f2f;"></span>
+            <a href="https://maps.app.goo.gl/167P6eHh7Kdsj5Ze8" target="_blank" rel="noopener">Zone Industrielle Rouiba, Alger</a>
+          </li>
+          <li style="margin-bottom:0.7em;display:flex;align-items:center;gap:0.7em;font-size:1.05em;">
+            <span class="fa-solid fa-phone" style="color:#d32f2f;"></span>
+            <a href="tel:+213561631866">+213 561 63 18 66</a>
+          </li>
+          <li style="display:flex;align-items:center;gap:0.7em;font-size:1.05em;">
+            <span class="fa-solid fa-envelope" style="color:#d32f2f;"></span>
+            <a href="mailto:alfasteel16@alfa-steel.com">Alfasteel16@alfa-steel.com</a>
+          </li>
+        </ul>
+        <div style="margin-top:1.2rem;display:flex;gap:2rem;justify-content:center;align-items:center;">
+          <a href="https://www.facebook.com/share/16B97cpG3K/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f" style="font-size:2.2rem;color:#1877f3;"></i></a>
+          <a href="https://wa.me/213561631866" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="font-size:2.2rem;color:#25d366;"></i></a>
+          <a href="https://t.me/alfasteel16" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane" style="font-size:2.2rem;color:#229ed9;"></i></a>
+        </div>
+      </div>
+      <!-- Form Column -->
+      <form action="https://formspree.io/f/xpwdbely" method="POST" id="contactForm" class="contact-form-col" style="flex:2 1 380px;min-width:280px;background:var(--white);border-radius:16px;border:1.5px solid var(--metal-light);box-shadow:0 6px 24px rgba(0,0,0,0.05);padding:2.2rem 2rem;display:flex;flex-direction:column;gap:1.1rem;align-items:stretch;">
+        <h3 style="margin:0 0 1.2rem 0;font-size:1.4rem;font-weight:600;color:#3a1f1f;text-align:center;">Formulaire de contact</h3>
+        <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+          <div style="flex:1 1 180px;min-width:140px;display:flex;flex-direction:column;gap:0.5rem;">
+            <label for="nameInput" style="font-weight:500;">Nom / Société</label>
+            <input type="text" name="name" id="nameInput" required placeholder="Votre nom complet" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;">
+          </div>
+          <div style="flex:1 1 140px;min-width:120px;display:flex;flex-direction:column;gap:0.5rem;">
+            <label for="phoneInput" style="font-weight:500;">Téléphone</label>
+            <input type="tel" name="phone" id="phoneInput" required placeholder="Votre numéro de téléphone" maxlength="10" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;">
+          </div>
+
+        </div>
+        <label for="emailInput" style="font-weight:500;">Email</label>
+        <input type="email" name="email" id="emailInput" required placeholder="Votre adresse email" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;">
+        <label for="messageInput" style="font-weight:500;">Message ou Consultation</label>
+        <textarea name="message" id="messageInput" required rows="5" placeholder="Votre message" style="padding:0.85rem 1rem;border-radius:8px;border:1.5px solid #eee;background:#f8fafc;min-height:100px;max-height:240px;resize:vertical;line-height:1.5;"></textarea>
+        <div class="file-upload-container" style="font-size:0.95rem;display:flex;flex-direction:column;gap:0.3rem;">
+          <span class="file-upload-label" style="font-weight:500;color:#555;">Joindre un fichier PDF ou Image</span>
+          <label for="fileInput" class="file-label">
+            <i class="fas fa-paperclip"></i> <span id="fileLabelText">Sélectionnez un fichier</span>
+            <input type="file" name="file" id="fileInput" accept=".pdf,image/*" style="display:none;" />
+          </label>
+        </div>
+        <button type="submit" class="join-us-cta">Envoyer</button>
+        <div id="formStatus" style="margin-top:0.7em;min-height:1.2em;color:#2e7d32;font-weight:500;text-align:center;"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">SARL ALFA STEEL</div>
+    <div>
+      &copy; <span id="displayYear"></span> Tous droits réservés. | Designed by
+      <a href="https://wa.me/213782665296" target="_blank" rel="noopener;">
+        Imad Bellil
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
+
+    

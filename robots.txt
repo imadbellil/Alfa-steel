@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://alfa-steel.com/sitemap.xml
+

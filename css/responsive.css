@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+  header, nav, .hero, .about, .services, .contact, footer {
+    padding: 1rem;
+  }
+
+  .flex, .row, .columns {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+}
+
+/* Hamburger Icon Default Hidden */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-primary);
+}
